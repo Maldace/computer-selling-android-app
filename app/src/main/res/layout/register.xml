@@ -7,122 +7,164 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <RelativeLayout
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp" >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đăng ký"
-            android:textSize="50dp"
-            android:id="@+id/lblLogin1"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="20dp"/>
-        <LinearLayout
+        android:layout_height="match_parent">
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:layout_below="@id/lblLogin1"
-            android:orientation="vertical" >
+            android:paddingRight="16dp" >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tên tài khoản:"
-                android:textSize="20dp"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtName" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mật khẩu:"
-                android:textSize="20dp"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtPass" />
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="20dp"
-                android:text="Đăng ký" />
-            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_weight="1"
-                    android:textSize="20dp"
-                    android:text="Đã có tài khoản? " />
-
-                <TextView
-                    android:id="@+id/twRegister"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="end"
-                    android:textSize="20dp"
-                    android:linksClickable="true"
-                    android:onClick="loginPageRedirect"
-                    android:autoLink="web"
-                    android:text="Đăng nhập"
-                    android:textColor="#0000FF"/>
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hoặc đăng nhập bằng:"
-                android:textSize="30dp"
-                android:id="@+id/lblLogin2"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"/>
-
+                android:text="Đăng ký"
+                android:textSize="50dp"
+                android:id="@+id/lblLogin1"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="20dp"/>
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="20dp">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_below="@id/lblLogin1"
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên tài khoản:"
+                    android:textSize="20dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtUserName" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mật khẩu:"
+                    android:textSize="20dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtPass" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Họ và tên:"
+                    android:textSize="20dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtName" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giới tính:"
+                    android:textSize="20dp"/>
+                <Spinner
+                    android:id="@+id/spnGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày sinh:"
+                    android:textSize="20dp"/>
+                <DatePicker
+                    android:id="@+id/datePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="20dp"
+                    android:text="Đăng ký" />
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-                <ImageButton
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/gg_icon"
-                    android:background="@android:color/transparent"
-                    android:scaleType="centerInside"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginEnd="60dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:text="Đã có tài khoản? " />
 
-                <ImageButton
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/fb_icon"
-                    android:background="@android:color/transparent"
-                    android:scaleType="centerInside"
-                    android:layout_marginEnd="60dp"/>
+                    <TextView
+                        android:id="@+id/twRegister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:textSize="20dp"
+                        android:linksClickable="true"
+                        android:onClick="loginPageRedirect"
+                        android:autoLink="web"
+                        android:text="Đăng nhập"
+                        android:textColor="#0000FF"/>
+                </LinearLayout>
 
-                <ImageButton
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/zalo_icon"
-                    android:background="@android:color/transparent"
-                    android:scaleType="centerInside"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hoặc đăng nhập bằng:"
+                    android:textSize="30dp"
+                    android:id="@+id/lblLogin2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="80dp">
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/gg_icon"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="60dp"/>
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/fb_icon"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        android:layout_marginEnd="60dp"/>
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/zalo_icon"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"/>
+                </LinearLayout>
+
             </LinearLayout>
 
-        </LinearLayout>
 
+        </RelativeLayout>
 
-    </RelativeLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
