@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtPass" />
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/cbRemember"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nhớ tài khoản"
@@ -56,7 +56,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="20dp"
-                android:text="Đăng nhâp" />
+                android:text="Đăng nhâp"
+                android:onClick="logIn"
+                android:id="@+id/btnLogin"/>
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +66,6 @@
                 android:weightSum="2">
 
                 <TextView
-                    android:id="@+id/start"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
@@ -73,13 +74,14 @@
                     android:text="Chưa có tài khoản? " />
 
                 <TextView
-                    android:id="@+id/end"
+                    android:id="@+id/twRegister"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="end"
                     android:textSize="20dp"
                     android:linksClickable="true"
+                    android:onClick="registerPageRedirect"
                     android:autoLink="web"
                     android:text="Đăng ký"
                     android:textColor="#0000FF"/>
@@ -97,10 +99,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_marginTop="20dp">
 
                 <ImageButton
                     android:layout_width="50dp"
+                    android:id="@+id/google"
                     android:layout_height="50dp"
                     android:src="@drawable/gg_icon"
                     android:background="@android:color/transparent"
@@ -110,6 +114,7 @@
 
                 <ImageButton
                     android:layout_width="50dp"
+                    android:id="@+id/facebook"
                     android:layout_height="50dp"
                     android:src="@drawable/fb_icon"
                     android:background="@android:color/transparent"
@@ -118,6 +123,7 @@
 
                 <ImageButton
                     android:layout_width="50dp"
+                    android:id="@+id/zalo"
                     android:layout_height="50dp"
                     android:src="@drawable/zalo_icon"
                     android:background="@android:color/transparent"
